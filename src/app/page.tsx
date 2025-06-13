@@ -19,15 +19,11 @@ import {
 import Image from "next/image";
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+  CardContent
 } from "./Components/Ui/card";
 import { Badge } from "./Components/Ui/badge";
-import { Input } from "./Components/Ui/input";
-import { Textarea } from "./Components/Ui/textarea";
 import PortfolioCarousel from "./Components/portfolio-carousel";
+import ContactForm from "./Components/contact";
 
 export default function Component() {
   const portfolioItems = [
@@ -523,8 +519,8 @@ export default function Component() {
                 </Button>
               </div>
             </div>
-
-            <Card className="border-0 shadow-2xl">
+            <ContactForm />
+            {/* <Card className="border-0 shadow-2xl">
               <CardHeader>
                 <CardTitle className="text-2xl text-gray-900">
                   Start Your Project
@@ -575,7 +571,7 @@ export default function Component() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
         </div>
       </section>
