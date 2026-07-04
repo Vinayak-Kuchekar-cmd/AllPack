@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { Button } from "./Ui/button";
 
 type Slide = {
@@ -14,7 +15,8 @@ type Slide = {
   title: string;
   subtitle: string;
   href: string;
-  accent: string; // tailwind gradient classes for the badge/CTA
+  panel: string; // solid/gradient background for the text panel
+  glow: string; // decorative blob color behind the product shot
 };
 
 const slides: Slide[] = [
@@ -25,7 +27,8 @@ const slides: Slide[] = [
     title: "Granulated Organic Manure Bags",
     subtitle: "Bold, shelf-ready woven bags built for 50kg loads",
     href: "/product",
-    accent: "from-green-500 to-emerald-600",
+    panel: "from-emerald-600 to-green-700",
+    glow: "bg-emerald-300",
   },
   {
     id: 2,
@@ -34,7 +37,8 @@ const slides: Slide[] = [
     title: "Tile Adhesive & Construction Bags",
     subtitle: "Premium print quality that signals product strength",
     href: "/product",
-    accent: "from-slate-600 to-blue-700",
+    panel: "from-blue-700 to-slate-800",
+    glow: "bg-blue-300",
   },
   {
     id: 3,
@@ -43,7 +47,8 @@ const slides: Slide[] = [
     title: "Neem-Based Fertilizer Bags",
     subtitle: "Clean, certified design that builds farmer trust",
     href: "/product",
-    accent: "from-lime-500 to-green-700",
+    panel: "from-green-700 to-lime-700",
+    glow: "bg-lime-300",
   },
   {
     id: 4,
@@ -52,7 +57,8 @@ const slides: Slide[] = [
     title: "Chilli, Coriander & Turmeric Pouches",
     subtitle: "Vivid, appetite-driving pouch printing that pops on shelf",
     href: "/product",
-    accent: "from-red-500 to-orange-600",
+    panel: "from-red-600 to-orange-700",
+    glow: "bg-orange-300",
   },
   {
     id: 5,
@@ -61,7 +67,8 @@ const slides: Slide[] = [
     title: "Mustard & Crop Seed Pouches",
     subtitle: "Durable pouches with tamper-proof sealing",
     href: "/product",
-    accent: "from-amber-500 to-yellow-600",
+    panel: "from-amber-600 to-yellow-700",
+    glow: "bg-yellow-300",
   },
   {
     id: 6,
@@ -70,21 +77,21 @@ const slides: Slide[] = [
     title: "Basmati & Rice Brand Bags",
     subtitle: "Distinct brand identities, one trusted packaging partner",
     href: "/product",
-    accent: "from-rose-500 to-red-600",
+    panel: "from-rose-700 to-red-800",
+    glow: "bg-rose-300",
   },
 ];
 
 export default function HeroBannerCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "center" }, [
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" }, [
     Autoplay({ delay: 3200, stopOnInteraction: false, stopOnMouseEnter: true }),
   ]);
 
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const scrollTo = useCallback(
-    (index: number) => emblaApi?.scrollTo(index),
-    [emblaApi],
-  );
+  const scrollTo = useCallback((index: number) => emblaApi?.scrollTo(index), [emblaApi]);
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -97,61 +104,80 @@ export default function HeroBannerCarousel() {
   }, [emblaApi]);
 
   return (
-    <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 md:py-10">
-        <div className="overflow-hidden rounded-2xl" ref={emblaRef}>
-          <div className="flex">
-            {slides.map((slide) => (
-              <div key={slide.id} className="flex-[0_0_100%] min-w-0">
-                <div className="relative h-[320px] sm:h-[420px] md:h-[480px] bg-gradient-to-br from-white to-gray-100 rounded-2xl overflow-hidden">
-                  {/* Product image */}
-                  <Image
-                    src={slide.image}
-                    alt={slide.title}
-                    fill
-                    priority={slide.id === 1}
-                    sizes="(max-width: 768px) 100vw, 1200px"
-                    className="object-contain p-6 md:p-10 drop-shadow-xl"
-                  />
+    <section className="relative bg-gray-950">
+      <div className="relative overflow-hidden" ref={emblaRef}>
+        <div className="flex">
+          {slides.map((slide) => (
+            <div key={slide.id} className="flex-[0_0_100%] min-w-0">
+              <div className="grid grid-cols-1 md:grid-cols-[minmax(0,42%)_1fr] h-[440px] sm:h-[420px] md:h-[440px]">
+                {/* Text panel */}
+                <div
+                  className={`relative z-10 flex flex-col justify-center gap-3 px-6 sm:px-10 md:px-12 py-8 bg-gradient-to-br ${slide.panel}`}
+                >
+                  <span className="inline-block w-fit text-[11px] font-semibold tracking-wider uppercase text-white/90 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm border border-white/20">
+                    {slide.eyebrow}
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl md:text-[2.15rem] font-bold text-white leading-tight">
+                    {slide.title}
+                  </h2>
+                  <p className="text-sm md:text-base text-white/85 max-w-sm">
+                    {slide.subtitle}
+                  </p>
+                  <Link href={slide.href} className="w-fit">
+                    <Button className="mt-2 bg-white text-gray-900 hover:bg-gray-100 font-semibold">
+                      Explore This Bag
+                    </Button>
+                  </Link>
+                </div>
 
-                  {/* Text overlay panel */}
-                  <div className="absolute inset-0 flex flex-col justify-end md:justify-center">
-                    <div className="bg-gradient-to-t md:bg-gradient-to-r from-black/80 via-black/40 to-transparent md:from-black/75 md:via-black/30 md:to-transparent p-6 md:p-10 md:w-3/5">
-                      <span
-                        className={`inline-block text-xs font-semibold tracking-wide uppercase text-white px-3 py-1 rounded-full bg-gradient-to-r ${slide.accent}`}
-                      >
-                        {slide.eyebrow}
-                      </span>
-                      <h2 className="mt-3 text-2xl md:text-4xl font-bold text-white leading-tight">
-                        {slide.title}
-                      </h2>
-                      <p className="mt-2 text-sm md:text-base text-gray-200 max-w-md">
-                        {slide.subtitle}
-                      </p>
-                      <Link href={slide.href}>
-                        <Button className="mt-4 bg-white text-gray-900 hover:bg-gray-100 font-semibold">
-                          Explore This Bag
-                        </Button>
-                      </Link>
-                    </div>
+                {/* Image panel */}
+                <div className="relative flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+                  <div
+                    className={`absolute w-72 h-72 md:w-96 md:h-96 rounded-full ${slide.glow} opacity-30 blur-3xl`}
+                  />
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={slide.image}
+                      alt={slide.title}
+                      fill
+                      priority={slide.id === 1}
+                      sizes="(max-width: 768px) 100vw, 60vw"
+                      className="object-contain p-6 sm:p-8 md:p-10 drop-shadow-2xl"
+                    />
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
+        {/* Prev / Next arrows */}
+        <button
+          onClick={scrollPrev}
+          aria-label="Previous slide"
+          className="hidden sm:flex absolute left-3 top-1/2 -translate-y-1/2 z-20 items-center justify-center w-10 h-10 rounded-full bg-white/90 hover:bg-white text-gray-800 shadow-lg transition"
+        >
+          <HiChevronLeft className="w-5 h-5" />
+        </button>
+        <button
+          onClick={scrollNext}
+          aria-label="Next slide"
+          className="hidden sm:flex absolute right-3 top-1/2 -translate-y-1/2 z-20 items-center justify-center w-10 h-10 rounded-full bg-white/90 hover:bg-white text-gray-800 shadow-lg transition"
+        >
+          <HiChevronRight className="w-5 h-5" />
+        </button>
+
         {/* Dots */}
-        <div className="flex justify-center gap-2 mt-4">
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2">
           {slides.map((slide, index) => (
             <button
               key={slide.id}
               onClick={() => scrollTo(index)}
               aria-label={`Go to slide ${index + 1}`}
-              className={`h-2 rounded-full transition-all duration-300 ${
+              className={`h-1.5 rounded-full transition-all duration-300 ${
                 selectedIndex === index
-                  ? "w-8 bg-orange-500"
-                  : "w-2 bg-gray-500/60 hover:bg-gray-400"
+                  ? "w-7 bg-white"
+                  : "w-1.5 bg-white/50 hover:bg-white/70"
               }`}
             />
           ))}
