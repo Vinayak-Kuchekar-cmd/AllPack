@@ -3,6 +3,7 @@
 import { FaMedal, FaBolt, FaLeaf, FaTag } from "react-icons/fa";
 import InquirySection from "./Components/enquiry";
 import ProductCarousel from "./Components/portfolio-carousel";
+import HeroBannerCarousel from "./Components/hero-banner-carousel";
 import { Button } from "./Components/Ui/button";
 import Link from "next/link";
 import QuoteButtonWithDialog from "./Components/getQuotePopup";
@@ -251,6 +252,8 @@ export default function Component() {
           </div>
         </div>
       </section> */}
+      {/* Auto-scrolling Hero Banner Carousel */}
+      <HeroBannerCarousel />
       {/* Portfolio Carousel Section */}
       <section id="portfolio" className=" bg-white">
         <div className="container mx-auto px-4 bg-gradient-to-b from-orange-100/90 to-orange-200/10">
