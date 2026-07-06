@@ -65,26 +65,26 @@ export default function AutoScrollCarousel() {
   }, [emblaApi, isHovered]);
 
   return (
-    <section className="w-full py-6 bg-gradient-to-b from-orange-100/90 to-orange-200/10">
-      <div className="container mx-auto max-w-7xl">
+    <section className="w-full py-4 sm:py-6 md:py-8 bg-gradient-to-b from-orange-100/90 to-orange-200/10">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 max-w-7xl">
         {/* Section heading — mirrors the "arrows in the corner" pattern from
             the reference design instead of overlaying controls on the image */}
-        <div className="flex items-end justify-between mb-4">
+        <div className="flex items-end justify-between mb-3 sm:mb-4 md:mb-6">
           <div>
-            <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900">
               Our Products
             </h2>
-            <div className="h-1 w-14 bg-orange-500 rounded-full mt-2" />
+            <div className="h-1 w-12 sm:w-14 bg-orange-500 rounded-full mt-2" />
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 sm:gap-2">
             <button
               onClick={scrollPrev}
               aria-label="Previous slide"
-              className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-colors duration-200"
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-colors duration-200"
             >
               <svg
-                className="w-4 h-4 md:w-5 md:h-5"
+                className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -100,10 +100,10 @@ export default function AutoScrollCarousel() {
             <button
               onClick={scrollNext}
               aria-label="Next slide"
-              className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-colors duration-200"
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-colors duration-200"
             >
               <svg
-                className="w-4 h-4 md:w-5 md:h-5"
+                className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -121,7 +121,7 @@ export default function AutoScrollCarousel() {
 
         {/* Slide frame */}
         <div
-          className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-gray-50"
+          className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-gray-50"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -130,7 +130,7 @@ export default function AutoScrollCarousel() {
               {images.map((src, index) => (
                 <div
                   key={index}
-                  className="relative flex-[0_0_100%] flex items-center justify-center bg-gray-50 min-h-80 sm:min-h-96"
+                  className="relative flex-[0_0_100%] flex items-center justify-center bg-gray-50"
                   style={{ aspectRatio: SLIDE_ASPECT }}
                 >
                   <Image
@@ -138,8 +138,8 @@ export default function AutoScrollCarousel() {
                     alt={`Promotional banner ${index + 1}`}
                     fill
                     priority={index === 0}
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1000px"
-                    className="object-contain p-4 sm:p-6"
+                    sizes="(max-width: 480px) calc(100vw - 24px), (max-width: 640px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 48px), 1000px"
+                    className="object-contain p-2 xs:p-3 sm:p-4 md:p-6"
                   />
                 </div>
               ))}
@@ -147,16 +147,16 @@ export default function AutoScrollCarousel() {
           </div>
 
           {/* Dot indicators */}
-          <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2">
+          <div className="absolute bottom-2.5 sm:bottom-3 md:bottom-4 left-1/2 -translate-x-1/2 z-10 flex items-center gap-1.5 sm:gap-2">
             {images.map((_, index) => (
               <button
                 key={index}
                 onClick={() => scrollTo(index)}
                 aria-label={`Go to slide ${index + 1}`}
-                className={`h-2 rounded-full transition-all duration-300 ${
+                className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${
                   selectedIndex === index
-                    ? "w-8 bg-orange-500"
-                    : "w-2 bg-gray-400 hover:bg-gray-600"
+                    ? "w-6 sm:w-8 bg-orange-500"
+                    : "w-1.5 sm:w-2 bg-gray-400 hover:bg-gray-600"
                 }`}
               />
             ))}
