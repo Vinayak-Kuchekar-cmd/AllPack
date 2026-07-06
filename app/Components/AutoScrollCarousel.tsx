@@ -65,11 +65,11 @@ export default function AutoScrollCarousel() {
   }, [emblaApi, isHovered]);
 
   return (
-    <section className="w-full py-8 md:py-12 bg-white">
-      <div className="container mx-auto px-4 lg:px-[5rem]">
+    <section className="w-full py-6 md:py-10 bg-white">
+      <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
         {/* Section heading — mirrors the "arrows in the corner" pattern from
             the reference design instead of overlaying controls on the image */}
-        <div className="flex items-end justify-between mb-5 md:mb-7">
+        <div className="flex items-end justify-between mb-6 md:mb-8">
           <div>
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
               Our Products
@@ -81,7 +81,7 @@ export default function AutoScrollCarousel() {
             <button
               onClick={scrollPrev}
               aria-label="Previous slide"
-              className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-colors duration-200"
+              className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-colors duration-200"
             >
               <svg
                 className="w-4 h-4 md:w-5 md:h-5"
@@ -100,7 +100,7 @@ export default function AutoScrollCarousel() {
             <button
               onClick={scrollNext}
               aria-label="Next slide"
-              className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-colors duration-200"
+              className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-colors duration-200"
             >
               <svg
                 className="w-4 h-4 md:w-5 md:h-5"
@@ -121,7 +121,7 @@ export default function AutoScrollCarousel() {
 
         {/* Slide frame */}
         <div
-          className="relative rounded-2xl overflow-hidden shadow-md border border-gray-100 bg-white"
+          className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-gray-50"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -130,7 +130,7 @@ export default function AutoScrollCarousel() {
               {images.map((src, index) => (
                 <div
                   key={index}
-                  className="relative flex-[0_0_100%]"
+                  className="relative flex-[0_0_100%] flex items-center justify-center bg-gray-50 min-h-80 sm:min-h-96"
                   style={{ aspectRatio: SLIDE_ASPECT }}
                 >
                   <Image
@@ -138,8 +138,8 @@ export default function AutoScrollCarousel() {
                     alt={`Promotional banner ${index + 1}`}
                     fill
                     priority={index === 0}
-                    sizes="100vw"
-                    className="object-contain"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1000px"
+                    className="object-contain p-4 sm:p-6"
                   />
                 </div>
               ))}
@@ -147,7 +147,7 @@ export default function AutoScrollCarousel() {
           </div>
 
           {/* Dot indicators */}
-          <div className="absolute bottom-3 md:bottom-4 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2">
+          <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2">
             {images.map((_, index) => (
               <button
                 key={index}
@@ -155,8 +155,8 @@ export default function AutoScrollCarousel() {
                 aria-label={`Go to slide ${index + 1}`}
                 className={`h-2 rounded-full transition-all duration-300 ${
                   selectedIndex === index
-                    ? "w-6 bg-orange-500"
-                    : "w-2 bg-white/70 hover:bg-white"
+                    ? "w-8 bg-orange-500"
+                    : "w-2 bg-gray-400 hover:bg-gray-600"
                 }`}
               />
             ))}
