@@ -18,6 +18,10 @@ const images: StaticImageData[] = [
   carousalImage4,
 ];
 
+// All 4 source images have been normalized to this exact aspect ratio
+// (see /public/images) so the frame never letterboxes at any breakpoint.
+const SLIDE_ASPECT = "2.45";
+
 const AUTOPLAY_DELAY = 4000; // ms
 
 export default function AutoScrollCarousel() {
@@ -61,20 +65,73 @@ export default function AutoScrollCarousel() {
   }, [emblaApi, isHovered]);
 
   return (
-    <div className="w-full py-4 md:py-6">
+    <section className="w-full py-8 md:py-12 bg-white">
       <div className="container mx-auto px-4 lg:px-[5rem]">
+        {/* Section heading — mirrors the "arrows in the corner" pattern from
+            the reference design instead of overlaying controls on the image */}
+        <div className="flex items-end justify-between mb-5 md:mb-7">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
+              Our Products
+            </h2>
+            <div className="h-1 w-14 bg-orange-500 rounded-full mt-2" />
+          </div>
+
+          <div className="flex items-center gap-2">
+            <button
+              onClick={scrollPrev}
+              aria-label="Previous slide"
+              className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-colors duration-200"
+            >
+              <svg
+                className="w-4 h-4 md:w-5 md:h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={scrollNext}
+              aria-label="Next slide"
+              className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-colors duration-200"
+            >
+              <svg
+                className="w-4 h-4 md:w-5 md:h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Slide frame */}
         <div
-          className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-gradient-to-br from-orange-50 via-white to-gray-50 group"
+          className="relative rounded-2xl overflow-hidden shadow-md border border-gray-100 bg-white"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          {/* Slides */}
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {images.map((src, index) => (
                 <div
                   key={index}
-                  className="relative flex-[0_0_100%] aspect-[16/7] sm:aspect-[21/8] md:aspect-[21/7]"
+                  className="relative flex-[0_0_100%]"
+                  style={{ aspectRatio: SLIDE_ASPECT }}
                 >
                   <Image
                     src={src}
@@ -88,47 +145,6 @@ export default function AutoScrollCarousel() {
               ))}
             </div>
           </div>
-
-          {/* Prev / Next arrows — appear on hover */}
-          <button
-            onClick={scrollPrev}
-            aria-label="Previous slide"
-            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-gray-700 rounded-full p-2 md:p-2.5 shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          >
-            <svg
-              className="w-5 h-5 md:w-6 md:h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-
-          <button
-            onClick={scrollNext}
-            aria-label="Next slide"
-            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-gray-700 rounded-full p-2 md:p-2.5 shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          >
-            <svg
-              className="w-5 h-5 md:w-6 md:h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
 
           {/* Dot indicators */}
           <div className="absolute bottom-3 md:bottom-4 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2">
@@ -147,6 +163,6 @@ export default function AutoScrollCarousel() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
