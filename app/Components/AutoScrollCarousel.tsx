@@ -1,14 +1,21 @@
 "use client";
 
 import { useEffect, useCallback, useState } from "react";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
+import carousalImage1 from "../../public/images/carousalImage1.png";
+import carousalImage2 from "../../public/images/carousalImage2.png";
+import carousalImage3 from "../../public/images/carousalImage3.png";
+import carousalImage4 from "../../public/images/carousalImage4.png";
 
-const images = [
-  "/images/carousalImage1.png",
-  "/images/carousalImage2.png",
-  "/images/carousalImage3.png",
-  "/images/carousalImage4.png",
+// Static imports let Next.js content-hash each file at build time, so
+// swapping an image (even under the same filename) always busts the
+// browser/CDN cache automatically — no manual cache-clearing needed.
+const images: StaticImageData[] = [
+  carousalImage1,
+  carousalImage2,
+  carousalImage3,
+  carousalImage4,
 ];
 
 const AUTOPLAY_DELAY = 4000; // ms
