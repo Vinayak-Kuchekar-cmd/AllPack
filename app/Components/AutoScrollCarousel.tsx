@@ -5,12 +5,10 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 
 const images = [
-  "/CarousalSlider1.jpg",
-  "/CarousalSlider2.jpg",
-  "/CarousalSlider3.jpg",
-  "/CarousalSlider4.jpg",
-  "/CarousalSlider5.jpg",
-  "/CarousalSlider6.jpg",
+  "/images/carousalImage1.png",
+  "/images/carousalImage2.png",
+  "/images/carousalImage3.png",
+  "/images/carousalImage4.png", 
 ];
 
 const AUTOPLAY_DELAY = 3000; // ms
