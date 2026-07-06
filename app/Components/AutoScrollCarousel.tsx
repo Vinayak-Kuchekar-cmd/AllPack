@@ -65,11 +65,11 @@ export default function AutoScrollCarousel() {
   }, [emblaApi, isHovered]);
 
   return (
-    <section className="w-full py-6 md:py-10 bg-white">
-      <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+    <section className="w-full py-6 bg-gradient-to-b from-orange-100/90 to-orange-200/10">
+      <div className="container mx-auto max-w-7xl">
         {/* Section heading — mirrors the "arrows in the corner" pattern from
             the reference design instead of overlaying controls on the image */}
-        <div className="flex items-end justify-between mb-6 md:mb-8">
+        <div className="flex items-end justify-between mb-4">
           <div>
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
               Our Products

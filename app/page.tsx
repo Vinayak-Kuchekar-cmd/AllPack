@@ -126,7 +126,6 @@ export default function Component() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-orange-50">
-      <AutoScrollCarousel />
       {/* Hero Section */}
       {/* <section id="home" className="relative py-5 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-gray-900/10" />
@@ -289,8 +288,11 @@ export default function Component() {
         <div className="max-w-7xl mx-auto">
           <ProductCarousel />
         </div>
-      </section>
-      <section className="lg:py-6 py-4 px-4 md:px-8 bg-[#F5F3ED]">
+      </section> 
+ 
+      <AutoScrollCarousel />
+ 
+      <section className="lg:py-6  px-4 md:px-8 bg-[#F5F3ED]">
         <div className="max-w-6xl mx-auto">
           {/* Hero Content */}
           <div className="text-center space-y-4 mb-10">
