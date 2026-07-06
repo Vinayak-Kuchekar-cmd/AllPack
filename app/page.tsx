@@ -3,10 +3,11 @@
 import { FaMedal, FaBolt, FaLeaf, FaTag } from "react-icons/fa";
 import InquirySection from "./Components/enquiry";
 import ProductCarousel from "./Components/portfolio-carousel";
-import AutoScrollCarousel from "./Components/AutoScrollCarousel";
+// import AutoScrollCarousel from "./Components/AutoScrollCarousel";
 import { Button } from "./Components/Ui/button";
 import Link from "next/link";
 import QuoteButtonWithDialog from "./Components/getQuotePopup";
+// import BagProductSlides from "./Components/BagsCarousal";
 
 export default function Component() {
   // const products = [
@@ -284,13 +285,14 @@ export default function Component() {
           </div>
         </div>
       </section>
-      <section className="lg:py-4 py-2 px-4 md:px-8 bg-gray-100">
+           <section className="lg:py-4 py-2 px-4 md:px-8 bg-gray-100">
         <div className="max-w-7xl mx-auto">
           <ProductCarousel />
         </div>
       </section> 
+      
  
-      <AutoScrollCarousel />
+      {/* <AutoScrollCarousel /> */}
  
       <section className="lg:py-6  px-4 md:px-8 bg-[#F5F3ED]">
         <div className="max-w-6xl mx-auto">
