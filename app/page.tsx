@@ -3,7 +3,6 @@
 import { FaMedal, FaBolt, FaLeaf, FaTag } from "react-icons/fa";
 import InquirySection from "./Components/enquiry";
 import ProductCarousel from "./Components/portfolio-carousel";
-import AutoScrollCarousel from "./Components/AutoScrollCarousel";
 import { Button } from "./Components/Ui/button";
 import Link from "next/link";
 import QuoteButtonWithDialog from "./Components/getQuotePopup";
@@ -126,7 +125,6 @@ export default function Component() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-orange-50">
-      <AutoScrollCarousel />
       {/* Hero Section */}
       {/* <section id="home" className="relative py-5 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-gray-900/10" />
