@@ -12,7 +12,7 @@ export const products: Product[] = [
     id: "1",
     name: "BHOG Long Grain Basmati Rice",
     category: "Rice",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_tli203tli203tli22-KPraOHFK3yFiXeEwWHyodNbVHfhUdl.png",
+    image: "/images/4.png",
     description: "Premium long grain basmati rice with authentic aromatic flavor",
     features: ["100% Natural", "Long Grain", "Authentic Aroma", "High Quality"]
   },

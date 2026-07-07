@@ -16,7 +16,7 @@ export default function ProductCarousel() {
       } else if (window.innerWidth < 1024) {
         setItemsPerView(2);
       } else {
-        setItemsPerView(3);
+        setItemsPerView(4);
       }
     };
 
@@ -71,7 +71,7 @@ export default function ProductCarousel() {
         {/* Carousel Container */}
         <div className="relative">
           {/* Products Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {visibleProducts.map((product: Product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -144,7 +144,7 @@ function ProductCard({ product }: { product: Product }) {
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-300"
+          className="w-full h-full p-4 group-hover:scale-110 transition-transform duration-300"
         />
         {/* Category Badge */}
         <div className="absolute top-4 right-4">
