@@ -55,11 +55,11 @@ export default function ProductCarousel() {
   );
 
   return (
-    <section className="w-full py-16 px-4 bg-gradient-to-br from-slate-50 to-slate-100">
+    <section className="w-full py-6 px-4 bg-gradient-to-br from-slate-50 to-slate-100">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+        <div className="text-center mb-4">
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">
             Our Premium Products
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
@@ -71,7 +71,7 @@ export default function ProductCarousel() {
         {/* Carousel Container */}
         <div className="relative">
           {/* Products Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
             {visibleProducts.map((product: Product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -126,11 +126,11 @@ export default function ProductCarousel() {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <button className="px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
             View All Products
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
@@ -147,23 +147,22 @@ function ProductCard({ product }: { product: Product }) {
           className="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-300"
         />
         {/* Category Badge */}
-        <div className="absolute top-4 right-4">
+        {/* <div className="absolute top-4 right-4">
           <span className="px-3 py-1 bg-orange-500 text-white text-xs font-semibold rounded-full">
             {product.category}
           </span>
-        </div>
+        </div> */}
       </div>
 
       {/* Content */}
-      <div className="flex-1 p-6 flex flex-col">
-        <h3 className="text-lg font-bold text-slate-900 mb-2 line-clamp-2 group-hover:text-orange-600 transition-colors">
+      <div className="flex-1 p-3 flex flex-col">
+        {/* <h3 className="text-lg font-bold text-slate-900 mb-2 line-clamp-2 group-hover:text-orange-600 transition-colors">
           {product.name}
         </h3>
         <p className="text-sm text-slate-600 mb-4 flex-1 line-clamp-2">
           {product.description}
         </p>
-
-        {/* Features */}
+ 
         <div className="mb-4">
           <div className="flex flex-wrap gap-2">
             {product.features.slice(0, 2).map((feature, idx) => (
@@ -175,12 +174,27 @@ function ProductCard({ product }: { product: Product }) {
               </span>
             ))}
           </div>
-        </div>
+        </div> */}
 
-        {/* Explore Button */}
-        <button className="w-full py-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-lg transition-all duration-300 mt-auto">
-          Learn More
+        {/* Explore Button */} 
+            <a
+                        href={`https://wa.me/918805519081?text=${encodeURIComponent(
+                          `Hello All Pack,
+
+I am interested in:
+
+Product: ${product.name}   
+
+Please send quotation.`,
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                           <button className="w-full py-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-lg transition-all duration-300 mt-auto">
+          Enquire Now
         </button>
+                      </a>
       </div>
     </div>
   );
