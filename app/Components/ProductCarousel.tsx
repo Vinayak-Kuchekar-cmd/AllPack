@@ -140,11 +140,11 @@ function ProductCard({ product }: { product: Product }) {
   return (
     <div className="group relative bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden h-full flex flex-col">
       {/* Image Container */}
-      <div className="relative w-full h-80 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden flex items-center justify-center">
+      <div className="relative w-full aspect-square bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden flex items-center justify-center">
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-full p-4 group-hover:scale-110 transition-transform duration-300"
+          className="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-300"
         />
         {/* Category Badge */}
         <div className="absolute top-4 right-4">
