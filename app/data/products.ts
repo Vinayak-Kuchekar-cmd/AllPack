@@ -12,7 +12,7 @@ export const products: Product[] = [
     id: "1",
     name: "BHOG Long Grain Basmati Rice",
     category: "Rice",
-    image: "/images/4.png",
+    image: "/images/carousalImage1.png",
     description: "Premium long grain basmati rice with authentic aromatic flavor",
     features: ["100% Natural", "Long Grain", "Authentic Aroma", "High Quality"]
   },
@@ -20,7 +20,7 @@ export const products: Product[] = [
     id: "2",
     name: "STAR GOLD Coriander Powder",
     category: "Spices",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2-Phr3v27IsMYMh0c5dCqS0epPJLd9B3.png",
+    image: "/images/carousalImage2.png",
     description: "Original coriander powder flavour for authentic cooking",
     features: ["100% Natural", "Original Flavour", "Pure Spice", "Traditional Recipe"]
   },
@@ -28,7 +28,7 @@ export const products: Product[] = [
     id: "3",
     name: "WONDER GRIP 315 Adhesive",
     category: "Construction",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WONDER.png-ZlMxxFiRrL2Ssdx1sK7V3E3mQfrChJ.jpeg",
+    image: "/images/carousalImage3.png",
     description: "Premium polymer modified cementitious adhesive for vitrified tiles",
     features: ["Extra Strong Bond", "Water Resistant", "Slip Resistant", "Long Durability"]
   },
@@ -36,7 +36,7 @@ export const products: Product[] = [
     id: "4",
     name: "STAR GOLD Chilli Powder",
     category: "Spices",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-phjAuHGx9wNmMCCqNA30AnUs7xTWYf.png",
+    image: "/images/carousalImage4.png",
     description: "Original chilli powder flavour for vibrant cooking",
     features: ["100% Natural", "Original Recipe", "Rich Color", "Premium Quality"]
   },
@@ -44,7 +44,7 @@ export const products: Product[] = [
     id: "5",
     name: "STOVA 4BR-48 Mustard Seeds",
     category: "Seeds",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-SBN60QdsY2fr58qAvUER8I6Dt980AH.png",
+    image: "/images/carousalImage5.png",
     description: "Premium mustard seeds for better productivity",
     features: ["Trust Quality Technology", "High Yield", "Better Productivity", "Natural Seeds"]
   },
@@ -52,7 +52,7 @@ export const products: Product[] = [
     id: "6",
     name: "AL AKBAR Indian Prime Rice",
     category: "Rice",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_tli203tli203tli23-bGe4vLZ8NNUronqmFWpnDAVHpk0GVI.png",
+    image: "/images/carousalImage6.png",
     description: "Premium quality Indian prime rice with rich flavor",
     features: ["Premium Quality", "Indian Prime", "Rich Taste", "Natural"]
   },
@@ -60,7 +60,7 @@ export const products: Product[] = [
     id: "7",
     name: "Pahal Jaisa Granulated Organic Manure",
     category: "Fertilizers",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/75280-polypropylene_bag-6012db3ced34a.png-L0L1eGuyqXfZ7ZuzGJvjzq3VKFNijG.jpeg",
+    image: "/images/carousalImage7.png",
     description: "Pure and natural granulated organic manure for agriculture",
     features: ["100% Organic", "Agricultural Grade", "Pure Natural", "Eco-Friendly"]
   },
@@ -68,7 +68,7 @@ export const products: Product[] = [
     id: "8",
     name: "Unique Ferrous Sulphate",
     category: "Fertilizers",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ferro.png-Z9uJZhwK3VJA7ykRWIdwkv7QYE3OHa.jpeg",
+    image: "/images/carousalImage8.png",
     description: "Premium ferrous sulphate for agricultural use",
     features: ["100% Satisfaction Guaranteed", "Agriculture Grade", "High Quality", "Effective"]
   },
@@ -76,7 +76,7 @@ export const products: Product[] = [
     id: "9",
     name: "Fiza Premium Basmati Rice",
     category: "Rice",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_w036n5w036n5w0364-RaXTkobMOxi2VvG4QwZvcYetgwITB9.png",
+    image: "/images/carousalImage9.png",
     description: "Authentic premium basmati rice for everyday cooking",
     features: ["Premium Basmati", "Authentic Taste", "Pure Rice", "Quality Assured"]
   },
@@ -84,7 +84,7 @@ export const products: Product[] = [
     id: "10",
     name: "SAIYAM Long Grain Basmati Rice",
     category: "Rice",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_tli203tli203tli24-cKp3bG9kvL877sAurTXRwk5tUFFsPb.png",
+    image: "/images/carousalImage10.png",
     description: "Premium long grain basmati with excellent quality",
     features: ["Long Grain", "Premium Quality", "Early Cooked", "Tasty"]
   },
@@ -92,7 +92,7 @@ export const products: Product[] = [
     id: "11",
     name: "KrushiPoshan Super Neem",
     category: "Fertilizers",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/NEEM.png-FiOyYQkaQ4tTUG5WerE1viwSa1EnOG.jpeg",
+    image: "/images/carousalImage11.png",
     description: "Natural product derived from neem kernels for agriculture",
     features: ["100% Natural", "Neem Based", "Organic", "Pure Product"]
   },
@@ -100,7 +100,7 @@ export const products: Product[] = [
     id: "12",
     name: "Unique Potash Fertilizer",
     category: "Fertilizers",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/UNIQUE.png-s9stwI3MK93Vt0GRSjc7NWBkPOdp0d.jpeg",
+    image: "/images/carousalImage12.png",
     description: "Premium potash derived from rhodophytes",
     features: ["Water Soluble", "High Grade", "Agriculture Purpose", "Quality Assured"]
   },
@@ -108,7 +108,7 @@ export const products: Product[] = [
     id: "13",
     name: "Unique Zinc Sulphate",
     category: "Fertilizers",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zinc.png-KZ1pLwbzWn9N56Shez2WZLqzPwHJQQ.jpeg",
+    image: "/images/carousalImage13.png",
     description: "Premium zinc sulphate for agricultural use",
     features: ["100% Satisfaction", "High Quality", "Effective", "Agriculture Grade"]
   },
@@ -116,7 +116,7 @@ export const products: Product[] = [
     id: "14",
     name: "Delhi Shudh Basmati Rice",
     category: "Rice",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_tli203tli203tli21-k2rCN3ERjRB6DcLkZJgRe0iYaxsZjI.png",
+    image: "/images/carousalImage14.png",
     description: "Extra gross basmati rice with premium quality",
     features: ["Extra Gross", "Premium Quality", "Pure Rice", "Authentic"]
   },
@@ -124,7 +124,7 @@ export const products: Product[] = [
     id: "15",
     name: "STAR GOLD Turmeric Powder",
     category: "Spices",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-alwVUSiaKkvkPoMyPkqrGxEH4jVK5F.png",
+    image: "/images/carousalImage15.png",
     description: "Original turmeric powder flavour for authentic cooking",
     features: ["100% Natural", "Original Recipe", "Pure Spice", "Premium Quality"]
   },
@@ -132,7 +132,7 @@ export const products: Product[] = [
     id: "16",
     name: "Unique Unistar Mix Micronutrient",
     category: "Fertilizers",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/unistar.png-BSGg0G0h1r5SopovSffuYY59tUlVKv.jpeg",
+    image: "/images/carousalImage16.png",
     description: "Maharashtra state grade mix micronutrient for agriculture",
     features: ["100% Satisfaction", "Grade 1", "Mix Micronutrient", "Effective"]
   }
