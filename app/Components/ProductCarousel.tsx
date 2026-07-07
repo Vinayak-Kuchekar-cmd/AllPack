@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { products, Product } from '@/app/data/products';
+import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
+import { products, Product } from '../data/products';
 
 export default function ProductCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -84,7 +84,7 @@ export default function ProductCarousel() {
               className="p-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white transition-all duration-300 shadow-lg hover:shadow-xl"
               aria-label="Previous products"
             >
-              <ChevronLeft size={24} />
+              <MdChevronLeft size={24} />
             </button>
 
             {/* Dot Indicators */}
@@ -113,7 +113,7 @@ export default function ProductCarousel() {
               className="p-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white transition-all duration-300 shadow-lg hover:shadow-xl"
               aria-label="Next products"
             >
-              <ChevronRight size={24} />
+              <MdChevronRight size={24} />
             </button>
           </div>
 
