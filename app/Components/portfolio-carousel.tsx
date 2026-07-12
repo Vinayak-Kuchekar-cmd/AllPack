@@ -10,11 +10,13 @@ const products = [
   {
     id: 1,
     name: "5Kg Fertilizer Bags",
+    altName: "5Kg BOPP laminated fertilizer bag",
     href: "/product/fertilizer-bags#5kgFertilizerBag",
     size: "5Kg",
     price: 21,
     originalPrice: 23,
-    description: "Modern fertilizer bag with premium quality printing",
+    description:
+      "BOPP laminated fertilizer bag ideal for retail-size Urea and NPK packaging.",
 
     // Only 3 colors
     colors: [
@@ -42,11 +44,13 @@ const products = [
   {
     id: 2,
     name: "10Kg Fertilizer Bags",
+    altName: "10Kg PP woven fertilizer bag",
     href: "/product/fertilizer-bags#10kgFertilizerBag",
     size: "10Kg",
     price: 24,
     originalPrice: 26,
-    description: "Premium NPK fertilizer packaging",
+    description:
+      "PP woven fertilizer bag with cylinder printing, suited for DAP and bio-fertilizer packaging.",
 
     colors: [
       //  {
@@ -73,11 +77,13 @@ const products = [
   {
     id: 3,
     name: "25Kg Fertilizer Bags",
+    altName: "25Kg cylinder printed fertilizer bag",
     size: "25Kg",
     href: "/product/fertilizer-bags#25kgFertilizerBag",
     price: 34,
     originalPrice: 37,
-    description: "Modern fertilizer bag with premium quality printing",
+    description:
+      "Heavy-duty BOPP laminated bag for organic fertilizer and agrochemical packaging.",
 
     colors: [
       {
@@ -103,11 +109,13 @@ const products = [
   {
     id: 4,
     name: "50Kg Fertilizer Bags",
+    altName: "50Kg heavy-duty fertilizer packaging bag",
     size: "50Kg",
     href: "/product/fertilizer-bags#50kgFertilizerBag",
     price: 44,
     originalPrice: 50,
-    description: "Heavy-duty fertilizer bag for bulk requirements",
+    description:
+      "Bulk-grade PP woven fertilizer bag built for high-volume NPK and Urea packaging.",
 
     colors: [
       {
@@ -215,7 +223,7 @@ export default function ProductSlides() {
                         <Image
                           key={color.name}
                           src={color.image}
-                          alt={`${product.name} - ${color.name}`}
+                          alt={`${product.altName} - ${color.name}`}
                           fill
                           priority
                           sizes="(max-width: 768px) 100vw, 33vw"
