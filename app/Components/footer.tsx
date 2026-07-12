@@ -66,7 +66,7 @@ export default function Footer() {
               <div className="flex justify-center space-x-4">
                 {/* Email */}
                 <a
-                  href="mailto:info@allpack.com"
+                  href="mailto:adminallpack128@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -81,7 +81,7 @@ export default function Footer() {
 
                 {/* WhatsApp */}
                 <a
-                  href="https://wa.me/919876543210"
+                  href="https://wa.me/918805519081"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -95,7 +95,7 @@ export default function Footer() {
                 </a>
 
                 {/* Call */}
-                <a href="tel:+919876543210">
+                <a href="tel:+918805519081">
                   <Button
                     variant="ghost"
                     size="icon"
