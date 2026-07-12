@@ -12,9 +12,9 @@ import { Card, CardContent } from '../../Components/Ui/card';
 export const metadata: Metadata = {
   title: "Agricultural Packaging Bags - Agrochemical & Farm Packaging",
   description:
-    "All Pack manufactures agricultural packaging bags and agrochemical packaging solutions using BOPP laminated and PP woven materials with cylinder printing, custom branding, multiple sizes, and bulk discounts for farms and agri-dealers across India.",
+    "Allpack manufactures agricultural packaging bags and agrochemical packaging solutions using BOPP laminated and PP woven materials with cylinder printing, custom branding, multiple sizes, and bulk discounts across India.",
   keywords:
-    "agricultural packaging bags, agrochemical packaging, fertilizer bags manufacturer, BOPP laminated fertilizer bags, PP woven fertilizer bags, custom branded fertilizer bags",
+    "agricultural packaging bags, agrochemical packaging, fertilizer bags manufacturer, BOPP laminated fertilizer bags, Common fertilizer bags, custom branded fertilizer bags",
 };
 
 export default function FeedBagsPage() {

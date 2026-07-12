@@ -9,9 +9,9 @@ import { Card, CardContent } from "../Components/Ui/card";
 export const metadata: Metadata = {
   title: "Fertilizer Bags & Packaging Products - 5Kg, 10Kg, 25Kg, 50Kg",
   description:
-    "Browse All Pack's full range of fertilizer bags and packaging products, including BOPP laminated bags, PP woven fertilizer bags, and cylinder printed fertilizer bags in 5Kg, 10Kg, 25Kg, and 50Kg sizes, with custom branding options.",
+    "Browse Allpack's full range of fertilizer bags and packaging products, including BOPP laminated bags, common fertilizer bags, and cylinder printed fertilizer bags in 5Kg, 10Kg, 25Kg, and 50Kg sizes, with custom branding options.",
   keywords:
-    "fertilizer bags manufacturer, BOPP laminated fertilizer bags, PP woven fertilizer bags, cylinder printed fertilizer bags, agricultural packaging bags, custom branded fertilizer bags",
+    "fertilizer bags manufacturer, BOPP laminated fertilizer bags, common fertilizer bags, cylinder printed fertilizer bags, agricultural packaging bags, custom branded fertilizer bags",
 };
 
 export default function ProductsPage() {

@@ -12,7 +12,7 @@ import { Badge } from '../../Components/Ui/badge';
 export const metadata: Metadata = {
   title: "Cattle Feed & Aquaculture Feed Packaging Bags",
   description:
-    "All Pack supplies durable cattle feed packaging bags and aquaculture feed packaging in BOPP laminated and PP woven materials, with cylinder printing, custom branding, multiple sizes, and bulk order discounts across India.",
+    "Allpack supplies durable cattle feed packaging bags and aquaculture feed packaging in BOPP laminated and PP woven materials, with cylinder printing, custom branding, multiple sizes, and bulk order discounts across India.",
   keywords:
     "aquaculture feed packaging, cattle feed packaging bags, agricultural packaging bags, BOPP laminated bags, PP woven fertilizer bags, custom branded fertilizer bags",
 };

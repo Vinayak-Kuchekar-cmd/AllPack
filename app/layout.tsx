@@ -18,15 +18,15 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "All Pack | Fertilizer Bags Manufacturer, BOPP Laminated Bags & Packaging Solutions",
-    template: "%s | All Pack",
+    default: "Allpack | Fertilizer Bags Manufacturer, BOPP Laminated Bags & Packaging Supplier",
+    template: "%s | Allpack",
   },
   description:
-    "All Pack manufactures BOPP laminated bags, PP woven fertilizer bags, cylinder printed fertilizer bags, poly pouches, corrugated boxes, and printed stickers for agriculture, aquaculture, and cattle feed packaging. Custom branding, multiple sizes, bulk order discounts. Trusted across India.",
+    "Allpack manufactures BOPP laminated bags, common fertilizer bags, cylinder printed fertilizer bags, poly pouches, corrugated boxes, and printed stickers for agriculture, aquaculture, and cattle feed packaging. Custom branding, multiple sizes, bulk order discounts. Trusted across India.",
   keywords: [
     "Fertilizer bags manufacturer",
     "BOPP laminated fertilizer bags",
-    "PP woven fertilizer bags",
+    "Common fertilizer bags",
     "Cylinder printed fertilizer bags",
     "Fertilizer packaging solutions",
     "BOPP laminated bags",
@@ -49,12 +49,12 @@ export const metadata: Metadata = {
     "Wholesale poly pouches supplier",
     "Packaging partner for fertilizer manufacturers",
   ],
-  authors: [{ name: "All Pack" }],
+  authors: [{ name: "Allpack" }],
   openGraph: {
-    title: "All Pack | Fertilizer Bags Manufacturer, BOPP Laminated Bags & Packaging Solutions",
+    title: "Allpack | Fertilizer Bags Manufacturer, BOPP Laminated Bags & Packaging Solutions",
     description:
       "BOPP bags, pouches, boxes & stickers for agriculture, aquaculture & cattle feed packaging needs.",
-    siteName: "All Pack",
+    siteName: "Allpack",
     locale: "en_IN",
     type: "website",
   },
