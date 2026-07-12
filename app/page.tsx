@@ -286,6 +286,15 @@ export default function Component() {
           </div>
         </div>
       </section>
+      {/* Fertilizer Bag Range - product photos, shown first */}
+       <section className="py-12 lg:py-16 px-4 md:px-8 bg-gray-100">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
+            Our Fertilizer Bag Range
+          </h2>
+          <PortfolioCarousel />
+        </div>
+      </section>
       {/* What We Manufacture - SEO body content */}
       <section className="py-12 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -366,14 +375,6 @@ export default function Component() {
           </div>
         </div>
       </section>
-       <section className="py-12 lg:py-16 px-4 md:px-8 bg-gray-100">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
-            Our Fertilizer Bag Range
-          </h2>
-          <PortfolioCarousel />
-        </div>
-      </section> 
       <ProductCarousel /> 
       
  
