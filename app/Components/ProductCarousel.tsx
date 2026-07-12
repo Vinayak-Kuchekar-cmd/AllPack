@@ -62,7 +62,7 @@ export default function ProductCarousel() {
           <h2 className="text-3xl font-bold text-slate-900 mb-4">
             Our Premium Products
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600  mx-auto">
             Discover our extensive range of agricultural and construction products
             crafted with quality and excellence
           </p>

@@ -218,7 +218,7 @@ export default function ProductSlides() {
                     {/* Product Image */}
                     {/* Product Image */}
                     {/* Product Image */}
-                    <div className="relative h-[360px] bg-white overflow-hidden">
+                    <div className="relative h-[420px] bg-white overflow-hidden">
                       {product.colors.map((color, index) => (
                         <Image
                           key={color.name}
