@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 // import { Button } from "../../Components/Ui/button";
 import { Badge } from "../../Components/Ui/badge";
 import fertilizerBags from "@/JsonDataFiles/FertilizerBagJSON";
@@ -10,6 +11,14 @@ import {
   FaAward, 
 } from "react-icons/fa";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Fertilizer Bags - NPK, Urea, DAP & Bio-Fertilizer Packaging",
+  description:
+    "All Pack manufactures BOPP laminated and PP woven fertilizer bags with cylinder printing for NPK fertilizer bags, urea packaging bags, DAP fertilizer bags, bio-fertilizer packaging, and organic fertilizer packaging. Available with or without liner, custom branding and bulk discounts.",
+  keywords:
+    "fertilizer bags manufacturer, BOPP laminated fertilizer bags, PP woven fertilizer bags, cylinder printed fertilizer bags, NPK fertilizer bags, urea packaging bags, DAP fertilizer bags, bio-fertilizer packaging, organic fertilizer packaging",
+};
 import QuoteButtonWithDialog from "../../Components/getQuotePopup";
 import BagImageGallery from "../../Components/imageCarousal";
 

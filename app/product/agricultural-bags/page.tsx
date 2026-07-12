@@ -1,4 +1,5 @@
 
+import type { Metadata } from "next";
 import { FaSearch, FaPhone, FaEnvelope, FaStar, FaBox, FaTruck, FaShieldAlt, FaAward } from 'react-icons/fa';
 import Link from "next/link";
 import agricultureBags from "@/JsonDataFiles/AgricultureJSON";
@@ -7,6 +8,14 @@ import { Button } from '../../Components/Ui/button';
 import QuoteButtonWithDialog from '../../Components/getQuotePopup';
 import BagImageGallery from '../../Components/imageCarousal';
 import { Card, CardContent } from '../../Components/Ui/card';
+
+export const metadata: Metadata = {
+  title: "Agricultural Packaging Bags - Agrochemical & Farm Packaging",
+  description:
+    "All Pack manufactures agricultural packaging bags and agrochemical packaging solutions using BOPP laminated and PP woven materials with cylinder printing, custom branding, multiple sizes, and bulk discounts for farms and agri-dealers across India.",
+  keywords:
+    "agricultural packaging bags, agrochemical packaging, fertilizer bags manufacturer, BOPP laminated fertilizer bags, PP woven fertilizer bags, custom branded fertilizer bags",
+};
 
 export default function FeedBagsPage() {
   const benefits = [
