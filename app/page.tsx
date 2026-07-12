@@ -261,10 +261,10 @@ export default function Component() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center lg:space-y-2">
                 <h1 className="text-2xl font-bold text-black">
-                  High-Quality Printed Packaging
+                  Fertilizer Bags Manufacturer & Custom Packaging Solutions
                 </h1>
                 <p className="hidden lg:flex text-xl text-black justify-center text-center ">
-                  Premium Printed Bags, Available Instantly.
+                  BOPP laminated bags, PP woven fertilizer bags, cylinder printed fertilizer bags, poly pouches, corrugated boxes, and printed stickers — manufactured for agriculture, aquaculture, and cattle feed businesses across India.
                 </p>
                 <div className="hidden lg:flex lg:flex-row gap-3 justify-center">
                   <Link href="/product">
@@ -284,6 +284,27 @@ export default function Component() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      {/* What We Manufacture - SEO body content */}
+      <section className="py-6 px-4 md:px-8 bg-white">
+        <div className="max-w-5xl mx-auto text-center space-y-4">
+          <h2 className="text-3xl font-bold text-gray-900">
+            Packaging Built for India&apos;s Agriculture Supply Chain
+          </h2>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            All Pack is a fertilizer bags manufacturer supplying{" "}
+            <strong>NPK fertilizer bags, Urea packaging bags, DAP fertilizer bags, bio-fertilizer packaging, and organic fertilizer packaging</strong>{" "}
+            to producers and dealers nationwide. Our <strong>BOPP laminated bags</strong> and{" "}
+            <strong>PP woven fertilizer bags</strong> are built for durability and moisture resistance, while our{" "}
+            <strong>cylinder printed fertilizer bags</strong> deliver sharp, high-definition branding at scale.
+          </p>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Beyond fertilizer, we also produce <strong>agrochemical packaging</strong>,{" "}
+            <strong>aquaculture feed packaging</strong>, and <strong>cattle feed packaging bags</strong> —
+            plus <strong>custom printed poly pouches</strong>, <strong>corrugated boxes</strong>, and{" "}
+            <strong>printed stickers and labels</strong> for allied agricultural products.
+          </p>
         </div>
       </section>
        <section className="lg:py-4 py-2 px-4 md:px-8 bg-gray-100">
@@ -445,6 +466,15 @@ export default function Component() {
               Professional packaging solutions you can trust
             </p>
           </div>
+
+          {/* SEO body paragraph */}
+          <p className="text-base text-gray-600 leading-relaxed max-w-4xl mx-auto text-center mb-8">
+            As a trusted <strong>fertilizer bag supplier</strong> and <strong>wholesale poly pouches supplier</strong>,
+            All Pack works directly with <strong>bulk fertilizer packaging</strong> buyers across India — from
+            independent farms to large fertilizer manufacturers looking for a reliable{" "}
+            <strong>packaging partner</strong>. Every order supports{" "}
+            <strong>custom branded fertilizer bags</strong> with your logo, colors, and specifications.
+          </p>
 
           {/* Features Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 lg:gap-8 gap-3">
