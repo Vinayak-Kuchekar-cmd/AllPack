@@ -60,21 +60,11 @@ export default function ProductCarousel() {
         {/* Header */}
         <div className="text-center mb-4">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">
-            Packaging Built for India&apos;s Agriculture Supply Chain
+            Our Premium Products
           </h2>
-          <p className="text-lg text-left ">
-          All Pack is a fertilizer bags manufacturer supplying{" "}
-            <strong>NPK fertilizer bags, Urea packaging bags, DAP fertilizer bags, bio-fertilizer packaging, and organic fertilizer packaging</strong>{" "}
-            to producers and dealers nationwide. Our <strong>BOPP laminated bags</strong> and{" "}
-            <strong>PP woven fertilizer bags</strong> are built for durability and moisture resistance, while our{" "}
-            <strong>cylinder printed fertilizer bags</strong> deliver sharp, high-definition branding at scale.
-          </p>
-          <p className="text-lg text-left leading-relaxed">
-            Beyond fertilizer, we also produce <strong>agrochemical packaging</strong>,{" "}
-            <strong>aquaculture feed packaging</strong>, and <strong>cattle feed packaging bags</strong> —
-            plus <strong>custom printed poly pouches</strong>, <strong>corrugated boxes</strong>, and{" "}
-            <strong>printed stickers and labels</strong> for allied agricultural products.
-          
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            Discover our extensive range of agricultural and construction products
+            crafted with quality and excellence
           </p>
         </div>
 
