@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   keywords:
     "BOPP laminated bags, poly pouches printing, corrugated boxes manufacturer, printed stickers and labels, custom printed poly pouches, agricultural packaging bags, fertilizer packaging solutions",
 };
-
+ 
 export default function Service() {
   const fertilizerBags = [
     {   
