@@ -1,6 +1,6 @@
 // import { Button } from "./Components/Ui/button";
 // import { Card } from "./Components/Ui/card";
-import { FaMedal, FaBolt, FaLeaf, FaTag } from "react-icons/fa";
+import { FaMedal, FaBolt, FaLeaf, FaTag, FaSeedling, FaShieldAlt, FaLayerGroup, FaPrint, FaFlask, FaFish, FaBoxOpen } from "react-icons/fa";
 import InquirySection from "./Components/enquiry";
 import PortfolioCarousel from "./Components/portfolio-carousel";
 // import AutoScrollCarousel from "./Components/AutoScrollCarousel";
@@ -287,24 +287,83 @@ export default function Component() {
         </div>
       </section>
       {/* What We Manufacture - SEO body content */}
-      <section className="py-6 px-4 md:px-8 bg-white">
-        <div className="max-w-5xl mx-auto text-center space-y-4">
-          <h2 className="text-3xl font-bold text-gray-900">
-            Packaging Built for India&apos;s Agriculture Supply Chain
-          </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            All Pack is a fertilizer bags manufacturer supplying{" "}
-            <strong>NPK fertilizer bags, Urea packaging bags, DAP fertilizer bags, bio-fertilizer packaging, and organic fertilizer packaging</strong>{" "}
-            to producers and dealers nationwide. Our <strong>BOPP laminated bags</strong> and{" "}
-            <strong>PP woven fertilizer bags</strong> are built for durability and moisture resistance, while our{" "}
-            <strong>cylinder printed fertilizer bags</strong> deliver sharp, high-definition branding at scale.
-          </p>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Beyond fertilizer, we also produce <strong>agrochemical packaging</strong>,{" "}
-            <strong>aquaculture feed packaging</strong>, and <strong>cattle feed packaging bags</strong> —
-            plus <strong>custom printed poly pouches</strong>, <strong>corrugated boxes</strong>, and{" "}
-            <strong>printed stickers and labels</strong> for allied agricultural products.
-          </p>
+      <section className="py-12 px-4 md:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">
+              Packaging Built for India&apos;s Agriculture Supply Chain
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              All Pack is a fertilizer bags manufacturer supplying durable, custom-branded
+              packaging to producers and dealers nationwide — built for agriculture,
+              aquaculture, and cattle feed businesses across India.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {[
+              {
+                icon: FaSeedling,
+                title: "NPK, Urea & DAP Bags",
+                description: "Fertilizer packaging for every grade",
+              },
+              {
+                icon: FaLeaf,
+                title: "Bio & Organic Packaging",
+                description: "For organic fertilizer producers",
+              },
+              {
+                icon: FaShieldAlt,
+                title: "BOPP Laminated Bags",
+                description: "Durable, moisture-resistant",
+              },
+              {
+                icon: FaLayerGroup,
+                title: "PP Woven Bags",
+                description: "Strong, tear-resistant weave",
+              },
+              {
+                icon: FaPrint,
+                title: "Cylinder Printed Bags",
+                description: "Sharp, high-definition branding",
+              },
+              {
+                icon: FaFlask,
+                title: "Agrochemical Packaging",
+                description: "Safe, compliant packaging",
+              },
+              {
+                icon: FaFish,
+                title: "Aquaculture & Cattle Feed",
+                description: "Feed packaging bags",
+              },
+              {
+                icon: FaBoxOpen,
+                title: "Pouches, Boxes & Stickers",
+                description: "Poly pouches, corrugated boxes, labels",
+              },
+            ].map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={idx}
+                  className="bg-gray-50 rounded-xl border border-gray-200 p-5 text-center
+                       hover:border-orange-400/60 hover:shadow-md
+                       transition-all duration-300"
+                >
+                  <div className="flex justify-center mb-3">
+                    <Icon className="w-7 h-7 text-orange-600" />
+                  </div>
+                  <h3 className="text-sm font-bold text-gray-900 mb-1 leading-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-gray-500 leading-snug">
+                    {item.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
        <section className="py-12 lg:py-16 px-4 md:px-8 bg-gray-100">
