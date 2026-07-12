@@ -1,6 +1,6 @@
 // import { Button } from "./Components/Ui/button";
 // import { Card } from "./Components/Ui/card";
-import { FaMedal, FaBolt, FaLeaf, FaTag } from "react-icons/fa";
+import { FaMedal, FaBolt, FaLeaf, FaTag, FaSeedling, FaShieldAlt, FaLayerGroup, FaPrint, FaFlask, FaFish, FaBoxOpen } from "react-icons/fa";
 import InquirySection from "./Components/enquiry";
 import PortfolioCarousel from "./Components/portfolio-carousel";
 // import AutoScrollCarousel from "./Components/AutoScrollCarousel";
@@ -255,16 +255,16 @@ export default function Component() {
         </div>
       </section> */}
       {/* Portfolio Carousel Section */}
-      <section id="portfolio" className=" bg-white">
-        <div className="container mx-auto px-4 bg-gradient-to-b from-orange-100/90 to-orange-200/10">
+      <section id="portfolio" className="bg-gradient-to-b from-orange-100/90 to-orange-200/10 ">
+        <div className="container mx-auto px-4 ">
           <div className="lg:py-3 py-1 px-4 ">
             <div className="max-w-6xl mx-auto">
               <div className="text-center lg:space-y-2">
                 <h1 className="text-2xl font-bold text-black">
-                  High-Quality Printed Packaging
+                  Fertilizer Bags Manufacturer & Custom Packaging Solutions
                 </h1>
                 <p className="hidden lg:flex text-xl text-black justify-center text-center ">
-                  Premium Printed Bags, Available Instantly.
+                  BOPP laminated bags, PP woven fertilizer bags, cylinder printed fertilizer bags, poly pouches, corrugated boxes, and printed stickers — manufactured for agriculture, aquaculture, and cattle feed businesses across India.
                 </p>
                 <div className="hidden lg:flex lg:flex-row gap-3 justify-center">
                   <Link href="/product">
@@ -286,38 +286,117 @@ export default function Component() {
           </div>
         </div>
       </section>
+      {/* Fertilizer Bag Range - product photos, shown first */}
        <section className="lg:py-4 py-2 px-4 md:px-8 bg-gray-100">
         <div className="max-w-7xl mx-auto">
+          {/* <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
+            Our Fertilizer Bag Range
+          </h2> */}
           <PortfolioCarousel />
         </div>
-      </section> 
+      </section>
+      {/* What We Manufacture - SEO body content */}
+      <section className="py-5 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">
+              Packaging Built for India&apos;s Agriculture Supply Chain
+            </h2>
+            <p className="text-lg text-gray-600  mx-auto leading-relaxed">
+              All Pack is a fertilizer bags manufacturer supplying durable, custom-branded
+              packaging to producers and dealers nationwide — built for agriculture,
+              aquaculture, and cattle feed businesses across India.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {[
+              {
+                icon: FaSeedling,
+                title: "NPK, Urea & DAP Bags",
+                description: "Fertilizer packaging for every grade",
+              },
+              {
+                icon: FaLeaf,
+                title: "Bio & Organic Packaging",
+                description: "For organic fertilizer producers",
+              },
+              {
+                icon: FaShieldAlt,
+                title: "BOPP Laminated Bags",
+                description: "Durable, moisture-resistant",
+              },
+              {
+                icon: FaLayerGroup,
+                title: "PP Woven Bags",
+                description: "Strong, tear-resistant weave",
+              },
+              {
+                icon: FaPrint,
+                title: "Cylinder Printed Bags",
+                description: "Sharp, high-definition branding",
+              },
+              {
+                icon: FaFlask,
+                title: "Agrochemical Packaging",
+                description: "Safe, compliant packaging",
+              },
+              {
+                icon: FaFish,
+                title: "Aquaculture & Cattle Feed",
+                description: "Feed packaging bags",
+              },
+              {
+                icon: FaBoxOpen,
+                title: "Pouches, Boxes & Stickers",
+                description: "Poly pouches, corrugated boxes, labels",
+              },
+            ].map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={idx}
+                  className="bg-gray-50 rounded-xl border border-gray-200 p-5 text-center
+                       hover:border-orange-400/60 hover:shadow-md
+                       transition-all duration-300"
+                >
+                  <div className="flex justify-center mb-3">
+                    <Icon className="w-10 h-10 text-orange-600" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1 leading-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 leading-snug">
+                    {item.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
       <ProductCarousel /> 
       
  
       {/* <AutoScrollCarousel /> */}
- 
+{/*  
       <section className="lg:py-6  px-4 md:px-8 bg-[#F5F3ED]">
-        <div className="max-w-6xl mx-auto">
-          {/* Hero Content */}
-          <div className="text-center space-y-4 mb-10">
-            {/* Badge */}
+        <div className="max-w-6xl mx-auto"> 
+          <div className="text-center space-y-4 mb-10"> 
             <span className="inline-block text-xs font-semibold text-orange-700 bg-orange-100 px-5 py-2 rounded-full">
               PREMIUM PACKAGING SOLUTIONS
             </span>
-
-            {/* Heading */}
+ 
             <h1 className="text-4xl  font-bold text-gray-900 leading-tight">
               Quality Packaging for Growing Farms
             </h1>
-
-            {/* Description */}
+ 
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Professional agriculture packaging with custom designs,
               competitive pricing, and nationwide delivery. Trusted by farmers
               and dealers across India.
             </p>
-
-            {/* Buttons */}
+ 
             <div className=" flex flex-row gap-3 justify-center">
               <Link href="/product">
                 <Button
@@ -334,9 +413,8 @@ export default function Component() {
               </QuoteButtonWithDialog>
             </div>
           </div>
-
-          {/* Stats Section */}
-          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+ 
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { number: "50+", label: "Design Varieties" },
               { number: "5-7 Days", label: "Fast Delivery" },
@@ -353,9 +431,9 @@ export default function Component() {
                 <p className="text-sm text-gray-500">{stat.label}</p>
               </div>
             ))}
-          </div> */}
+          </div> 
         </div>
-      </section>
+      </section>  */}
       {/* Product Range */}
       {/* <section className="py-4 px-4 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
@@ -434,17 +512,26 @@ export default function Component() {
         </div>
       </section> */}
       {/* Why Choose Us - Features with Icons */}
-      <section className=" px-4 md:px-8 bg-[#F5F3ED]">
-        <div className="max-w-6xl mx-auto">
+      <section className=" px-4 md:px-8 bg-[#F5F3ED] py-4">
+        <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-6">
+          <div className="text-center mb-2">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Why Choose Us
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-xl text-gray-600">
               Professional packaging solutions you can trust
             </p>
           </div>
+
+          {/* SEO body paragraph */}
+          <p className="text-xl text-gray-600 leading-relaxed mx-auto text-center mb-4">
+            As a trusted <strong>fertilizer bag supplier</strong> and <strong>wholesale poly pouches supplier</strong>,
+            All Pack works directly with <strong>bulk fertilizer packaging</strong> buyers across India — from
+            independent farms to large fertilizer manufacturers looking for a reliable{" "}
+            <strong>packaging partner</strong>. Every order supports{" "}
+            <strong>custom branded fertilizer bags</strong> with your logo, colors, and specifications.
+          </p>
 
           {/* Features Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 lg:gap-8 gap-3">
