@@ -1,9 +1,18 @@
+import type { Metadata } from "next";
 import { FaArrowLeft  } from 'react-icons/fa';
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../Components/Ui/button";
 import QuoteButtonWithDialog from "../Components/getQuotePopup";
 import { Card, CardContent } from "../Components/Ui/card";
+
+export const metadata: Metadata = {
+  title: "Fertilizer Bags & Packaging Products - 5Kg, 10Kg, 25Kg, 50Kg",
+  description:
+    "Browse All Pack's full range of fertilizer bags and packaging products, including BOPP laminated bags, PP woven fertilizer bags, and cylinder printed fertilizer bags in 5Kg, 10Kg, 25Kg, and 50Kg sizes, with custom branding options.",
+  keywords:
+    "fertilizer bags manufacturer, BOPP laminated fertilizer bags, PP woven fertilizer bags, cylinder printed fertilizer bags, agricultural packaging bags, custom branded fertilizer bags",
+};
 
 export default function ProductsPage() {
   const productCategories = [

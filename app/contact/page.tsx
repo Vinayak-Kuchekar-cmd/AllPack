@@ -1,8 +1,17 @@
+import type { Metadata } from "next";
 import { FaPhone, FaMapPin } from 'react-icons/fa';
 import { Badge } from "../Components/Ui/badge";
 import { FaEnvelope, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import { Button } from "../Components/Ui/button";
 import ContactForm from "../Components/contact";
+
+export const metadata: Metadata = {
+  title: "Contact Us - Fertilizer Bag Suppliers Near You",
+  description:
+    "Get in touch with All Pack for bulk fertilizer packaging in India, custom branded fertilizer bags, and wholesale poly pouches supply. Your trusted packaging partner for fertilizer manufacturers, feed producers, and agri-dealers.",
+  keywords:
+    "fertilizer bag suppliers near me, bulk fertilizer packaging India, custom branded fertilizer bags, wholesale poly pouches supplier, packaging partner for fertilizer manufacturers, contact All Pack",
+};
 
 export default function ContactPage() {
     return (

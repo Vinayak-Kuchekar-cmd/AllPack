@@ -1,4 +1,5 @@
 
+import type { Metadata } from "next";
 import { FaSearch, FaPhone, FaEnvelope, FaStar, FaBox, FaTruck, FaShieldAlt, FaAward } from 'react-icons/fa';
 import Link from "next/link";
 import feedBags from "@/JsonDataFiles/FeedBagJSON";
@@ -7,6 +8,14 @@ import BagImageGallery from "../../Components/imageCarousal";
 import { Card, CardContent } from "../../Components/Ui/card";
 import { Button } from '../../Components/Ui/button';
 import { Badge } from '../../Components/Ui/badge';
+
+export const metadata: Metadata = {
+  title: "Cattle Feed & Aquaculture Feed Packaging Bags",
+  description:
+    "All Pack supplies durable cattle feed packaging bags and aquaculture feed packaging in BOPP laminated and PP woven materials, with cylinder printing, custom branding, multiple sizes, and bulk order discounts across India.",
+  keywords:
+    "aquaculture feed packaging, cattle feed packaging bags, agricultural packaging bags, BOPP laminated bags, PP woven fertilizer bags, custom branded fertilizer bags",
+};
 
 export default function FeedBagsPage() {
  

@@ -1,9 +1,18 @@
+import type { Metadata } from "next";
 import { Button } from "../Components/Ui/button"
 import { Badge } from "../Components/Ui/badge"
 import { Card, CardContent } from "../Components/Ui/card"
 import { FaArrowRight, FaBox, FaPalette, FaShieldAlt, FaTruck, FaUsers, FaAward, FaCheckCircle, FaEye } from 'react-icons/fa';
 
 import Image from "next/image"
+
+export const metadata: Metadata = {
+  title: "Packaging Services - BOPP Bags, Poly Pouches, Corrugated Boxes & Stickers",
+  description:
+    "Explore All Pack's packaging services: BOPP laminated bags, poly pouches printing, corrugated boxes manufacturing, and printed stickers and labels for agriculture, aquaculture, and cattle feed businesses. Custom branding and bulk order discounts.",
+  keywords:
+    "BOPP laminated bags, poly pouches printing, corrugated boxes manufacturer, printed stickers and labels, custom printed poly pouches, agricultural packaging bags, fertilizer packaging solutions",
+};
 
 export default function Service() {
   const fertilizerBags = [
