@@ -17,6 +17,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  verification: {
+  google: "dEc3G01PFidU-WBroPYuD4xS8Ytz3sToVd8JaT0ezGg",
+},
   title: {
     default: "Allpack | Fertilizer Bags Manufacturer, BOPP Laminated Bags & Packaging Supplier",
     template: "%s | Allpack",
