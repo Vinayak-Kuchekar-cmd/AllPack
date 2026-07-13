@@ -48,7 +48,7 @@ export default function ContactPage() {
 
               <div className="flex space-x-4">
   {/* Email */}
-  <a href="mailto:info@allpack.com">
+  <a href="mailto:adminallpack128@gmail.com">
     <Button
       variant="secondary"
       size="icon"
@@ -71,7 +71,7 @@ export default function ContactPage() {
 
   {/* WhatsApp */}
   <a
-    href="https://wa.me/919876543210"
+    href="https://wa.me/918805519081"
     target="_blank"
     rel="noopener noreferrer"
   >
