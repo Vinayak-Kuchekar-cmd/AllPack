@@ -304,7 +304,7 @@ export default function ProductSlides() {
                       {/* Button */}
                       <a
                         href={`https://wa.me/918805519081?text=${encodeURIComponent(
-                          `Hello All Pack,
+                          `Hello Allpack,
 
 I am interested in:
 

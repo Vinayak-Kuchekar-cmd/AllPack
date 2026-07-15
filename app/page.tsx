@@ -303,7 +303,7 @@ export default function Component() {
               Packaging Built for India&apos;s Agriculture Supply Chain
             </h2>
             <p className="text-lg text-gray-600  mx-auto leading-relaxed">
-              All Pack is a fertilizer bags manufacturer supplying durable, custom-branded
+              Allpack is a fertilizer bags manufacturer supplying durable, custom-branded
               packaging to producers and dealers nationwide — built for agriculture,
               aquaculture, and cattle feed businesses across India.
             </p>
@@ -527,7 +527,7 @@ export default function Component() {
           {/* SEO body paragraph */}
           <p className="text-xl text-gray-600 leading-relaxed mx-auto text-center mb-4">
             As a trusted <strong>fertilizer bag supplier</strong> and <strong>wholesale poly pouches supplier</strong>,
-            All Pack works directly with <strong>bulk fertilizer packaging</strong> buyers across India — from
+            Allpack works directly with <strong>bulk fertilizer packaging</strong> buyers across India — from
             independent farms to large fertilizer manufacturers looking for a reliable{" "}
             <strong>packaging partner</strong>. Every order supports{" "}
             <strong>custom branded fertilizer bags</strong> with your logo, colors, and specifications.
