@@ -24,17 +24,19 @@ const products = [
         name: "blue",
         code: "#3B82F6",
         image: "/images/blue5kgcopys.png",
-        imageUrl: "https://all-pack.vercel.app/images/green5kgcopys.png",
+        imageUrl: "https://all-pack.vercel.app/images/blue5kgcopys.png",
       },
       {
         name: "green",
         code: "#22C55E",
         image: "/images/green5kgcopys.png",
+        imageUrl: "https://all-pack.vercel.app/images/green5kgcopys.png",
       },
       {
         name: "orange",
         code: "#F97316",
         image: "/images/orange5kgcopys.png",
+        imageUrl: "https://all-pack.vercel.app/images/orange5kgcopys.png",
       },
     ],
 
@@ -63,11 +65,13 @@ const products = [
         name: "green",
         code: "#22C55E",
         image: "/images/green5kgcopys.png",
+        imageUrl: "https://all-pack.vercel.app/images/green5kgcopys.png",
       },
       {
         name: "orange",
         code: "#F97316",
         image: "/images/orange5kgcopys.png",
+        imageUrl: "https://all-pack.vercel.app/images/orange5kgcopys.png",
       },
     ],
 
@@ -90,16 +94,19 @@ const products = [
         name: "red",
         code: "#D90445",
         image: "/images/red25kgcopy.png",
+        imageUrl: "https://all-pack.vercel.app/images/red25kgcopy.png",
       },
       {
         name: "yellow",
         code: "#FACC15",
         image: "/images/yellow25kg.png",
+        imageUrl: "https://all-pack.vercel.app/images/yellow25kg.png",
       },
       {
         name: "blue",
         code: "#3B82F6",
         image: "/images/blue25kg.png",
+        imageUrl: "https://all-pack.vercel.app/images/blue25kg.png",
       },
     ],
 
@@ -122,16 +129,19 @@ const products = [
         name: "green",
         code: "#22C55E",
         image: "/images/green50kgcopy.jpeg",
+        imageUrl: "https://all-pack.vercel.app/images/green50kgcopy.jpeg",
       },
       {
         name: "yellow",
         code: "#FACC15",
         image: "/images/yellow50kgcopy.jpeg",
+        imageUrl: "https://all-pack.vercel.app/images/yellow50kgcopy.jpeg",
       },
       {
         name: "orange",
         code: "#F97316",
         image: "/images/orange50kgcopy.jpeg",
+        imageUrl: "https://all-pack.vercel.app/images/orange50kgcopy.jpeg",
       },
     ],
 
@@ -380,3 +390,4 @@ Please send quotation.`,
     </div>
   );
 }
+
