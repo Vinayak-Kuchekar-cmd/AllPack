@@ -17,6 +17,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://all-pack.vercel.app"),
   verification: {
   google: "dEc3G01PFidU-WBroPYuD4xS8Ytz3sToVd8JaT0ezGg",
 },
@@ -63,6 +64,29 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Allpack",
+  url: "https://all-pack.vercel.app",
+  logo: "https://all-pack.vercel.app/allpacklogo.png",
+  description:
+    "Allpack manufactures BOPP laminated bags, PP woven fertilizer bags, cylinder printed fertilizer bags, poly pouches, corrugated boxes, and printed stickers for agriculture, aquaculture, and cattle feed packaging.",
+  email: "adminallpack128@gmail.com",
+  telephone: "+91-8805519081",
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "IN",
+  },
+  areaServed: "IN",
+  makesOffer: [
+    { "@type": "Offer", itemOffered: { "@type": "Product", name: "5Kg Fertilizer Bags" } },
+    { "@type": "Offer", itemOffered: { "@type": "Product", name: "10Kg Fertilizer Bags" } },
+    { "@type": "Offer", itemOffered: { "@type": "Product", name: "25Kg Fertilizer Bags" } },
+    { "@type": "Offer", itemOffered: { "@type": "Product", name: "50Kg Fertilizer Bags" } },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -73,6 +97,10 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${plusJakartaSans.variable} font-sans antialiased`}
       >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
       <Topnav />  
        {children}
       <Footer />
