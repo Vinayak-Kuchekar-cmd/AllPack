@@ -286,12 +286,24 @@ export default function Component() {
           </div>
         </div>
       </section>
+      
+      <ProductCarousel /> 
+
       {/* Fertilizer Bag Range - product photos, shown first */}
        <section className="lg:py-4 py-2 px-4 md:px-8 bg-gray-100">
         <div className="max-w-7xl mx-auto">
           {/* <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
             Our Fertilizer Bag Range
           </h2> */}
+              <div className="text-center mb-4">
+                    <h2 className="text-3xl font-bold text-slate-900 mb-4">
+                      Our Premium Products
+                    </h2>
+                    <p className="text-lg text-slate-600  mx-auto">
+                      Discover our extensive range of agricultural and construction products
+                      crafted with quality and excellence
+                    </p>
+                  </div>
           <PortfolioCarousel />
         </div>
       </section>
@@ -375,7 +387,6 @@ export default function Component() {
           </div>
         </div>
       </section>
-      <ProductCarousel /> 
       
  
       {/* <AutoScrollCarousel /> */}
