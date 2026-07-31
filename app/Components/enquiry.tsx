@@ -225,7 +225,7 @@ export default function InquirySection() {
                 <div>
                   <h3 className="text-gray-900 font-semibold text-lg">Call Us Directly</h3>
                   <p className="text-gray-700">+91 88055 19081</p>
-                  <p className="text-gray-600 text-sm">75% Response Rate</p>
+                  <p className="text-gray-600 text-sm">Quick & Direct Support</p>
                 </div>
               </div>
             </div>

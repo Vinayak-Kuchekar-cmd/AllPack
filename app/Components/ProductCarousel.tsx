@@ -58,7 +58,14 @@ export default function ProductCarousel() {
     <section className="w-full py-6 px-4 bg-gradient-to-br from-slate-50 to-slate-100">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-    
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-slate-900 mb-3">
+            Trusted by Leading Brands
+          </h2>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            A look at the custom packaging we&apos;ve printed and manufactured for clients across rice, spices, construction, and agriculture
+          </p>
+        </div>
 
         {/* Carousel Container */}
         <div className="relative">
