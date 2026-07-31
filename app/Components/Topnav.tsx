@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { Button } from "./Ui/button";
 import QuoteButtonWithPopup from "./getQuotePopup";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaTruck } from "react-icons/fa";
 
 interface SubMenuItem {
   name: string;
@@ -17,6 +17,7 @@ interface MenuItem {
   name: string;
   href: string;
   subItems?: SubMenuItem[];
+  icon?: React.ReactNode;
 }
 
 export default function Topnav() {
@@ -216,8 +217,9 @@ export default function Topnav() {
       href: "/contact",
     },
     {
-      name: "🏷️ Track Order",
+      name: "Track Order",
       href: "/order-status",
+      icon: <FaTruck className="mr-1.5 h-3.5 w-3.5" />,
     },
   ];
 
@@ -315,6 +317,7 @@ export default function Topnav() {
                     href={item.href}
                     className="flex items-center text-xl font-light text-white hover:text-orange-500 transition-colors"
                   >
+                    {item.icon}
                     {item.name}
                     {item.subItems && (
                       <FaChevronDown className="ml-1 h-3 w-3" />
@@ -438,11 +441,12 @@ export default function Topnav() {
                   <div className="flex items-center justify-between">
                     <Link
                       href={item.href}
-                      className="text-lg font-medium text-gray-800 hover:text-orange-500 transition-colors"
+                      className="flex items-center text-lg font-medium text-gray-800 hover:text-orange-500 transition-colors"
                       onClick={() =>
                         !item.subItems && setIsMobileMenuOpen(false)
                       }
                     >
+                      {item.icon}
                       {item.name}
                     </Link>
                     {item.subItems && (
